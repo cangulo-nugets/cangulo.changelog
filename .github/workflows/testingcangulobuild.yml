@@ -1,0 +1,16 @@
+name: Execute UT
+
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Execute UT using cangulo.cicd
+    steps:
+      - uses: actions/checkout@v2
+      - name: Downloading cangulo.cicd
+        uses: cangulo/cangulo.cicd-gh-action@v0.0.1
+        with:
+          version: latest
+      - name: Execute UT
+        run: ./cangulo.cicd/cangulo.cicd --root . --target ExecuteUnitTests --verbosity verbose

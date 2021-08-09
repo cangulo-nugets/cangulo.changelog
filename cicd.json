@@ -1,0 +1,6 @@
+{
+    "$schema": "https://raw.githubusercontent.com/cangulo/cangulo.cicd/main/cicd.schema.json",
+    "dotnetTargets": {
+        "solutionPath": "./src/cangulo.changelog.sln"
+    }
+}
