@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>cangulo.changelog</PackageId>
+    <Version>0.0.1-beta</Version>
+    <Authors>Carlos Angulo</Authors>
+    <Company></Company>
+        <PackageTags>changelog;release;releases;dotnet;</PackageTags>
+    <Description>      
+      Repository:  https://github.com/cangulo/cangulo.changelog
+    </Description>
+  </PropertyGroup>
+
+</Project>
