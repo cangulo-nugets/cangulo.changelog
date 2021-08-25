@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog", "cangul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.UT", "..\test\cangulo.changelog.UT\cangulo.changelog.UT.csproj", "{A5819EEA-06B1-4C13-975D-CA9A5FC42115}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.domain", "cangulo.changelog.domain\cangulo.changelog.domain.csproj", "{5359DFDA-CDF3-448C-BD4C-1BEEC8392937}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.abstractions", "cangulo.changelog.abstractions\cangulo.changelog.abstractions.csproj", "{4699C385-0F48-4A5A-93A5-E490F7E2378F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.domain.UT", "..\test\cangulo.changelog.domain.UT\cangulo.changelog.domain.UT.csproj", "{A9E3E8E0-F66A-4F21-BB08-701F46458E89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,11 +37,26 @@ Global
 		{A5819EEA-06B1-4C13-975D-CA9A5FC42115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5819EEA-06B1-4C13-975D-CA9A5FC42115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5819EEA-06B1-4C13-975D-CA9A5FC42115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5359DFDA-CDF3-448C-BD4C-1BEEC8392937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5359DFDA-CDF3-448C-BD4C-1BEEC8392937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5359DFDA-CDF3-448C-BD4C-1BEEC8392937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5359DFDA-CDF3-448C-BD4C-1BEEC8392937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4699C385-0F48-4A5A-93A5-E490F7E2378F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4699C385-0F48-4A5A-93A5-E490F7E2378F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4699C385-0F48-4A5A-93A5-E490F7E2378F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4699C385-0F48-4A5A-93A5-E490F7E2378F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E3E8E0-F66A-4F21-BB08-701F46458E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E3E8E0-F66A-4F21-BB08-701F46458E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E3E8E0-F66A-4F21-BB08-701F46458E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E3E8E0-F66A-4F21-BB08-701F46458E89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{A9E3E8E0-F66A-4F21-BB08-701F46458E89} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
+		{4699C385-0F48-4A5A-93A5-E490F7E2378F} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
+		{5359DFDA-CDF3-448C-BD4C-1BEEC8392937} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
 		{A5819EEA-06B1-4C13-975D-CA9A5FC42115} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
 		{1C8C2088-57AA-4FDF-A89F-B2861DDA8B6E} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
 		{F930C528-8D09-4170-9C94-9A626BCF873D} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}

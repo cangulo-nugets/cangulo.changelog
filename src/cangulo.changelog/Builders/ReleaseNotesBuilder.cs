@@ -1,5 +1,5 @@
-using System.Linq;
-using System.Text;
+using System;
+using cangulo.changelog.domain.Builders;
 
 namespace cangulo.changelog.builders
 {
@@ -10,21 +10,13 @@ namespace cangulo.changelog.builders
 
     public class ReleaseNotesBuilder : IReleaseNotesBuilder
     {
-        public string Build(string[] changes)
+        private readonly IChangesAreaBuilder _changesAreaBuilder;
+
+        public ReleaseNotesBuilder(IChangesAreaBuilder changesAreaBuilder)
         {
-            if (changes.Any())
-            {
-                var body = new StringBuilder();
-
-                changes
-                    .ToList()
-                    .ForEach(x => body.AppendLine(MarkdownBullet(x)));
-
-                return body.ToString();
-            }
-            return string.Empty;
+            _changesAreaBuilder = changesAreaBuilder ?? throw new ArgumentNullException(nameof(changesAreaBuilder));
         }
-
-        private string MarkdownBullet(string input) => $"* {input}";
+        public string Build(string[] changes)
+            => _changesAreaBuilder.Build(changes);
     }
 }

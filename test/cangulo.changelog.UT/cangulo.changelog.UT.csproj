@@ -24,13 +24,4 @@
     <ProjectReference Include="..\..\src\cangulo.changelog\cangulo.changelog.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="Builders\testData\ReleaseBodyBuider_happyPath_expected.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Builders\testData\ReleaseBodyBuider_happyPath_input.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  
 </Project>

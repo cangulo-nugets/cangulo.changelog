@@ -1,4 +1,3 @@
 # TODO
 
-1. Create the test
-2. Implement the classes needed
+1. Continue with ConventionalCommitParserShould. Create test cases on json
