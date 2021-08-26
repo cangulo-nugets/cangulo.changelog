@@ -10,13 +10,13 @@ namespace cangulo.changelog.builders
 
     public class ReleaseNotesBuilder : IReleaseNotesBuilder
     {
-        private readonly IChangesAreaBuilder _changesAreaBuilder;
+        private readonly IChangesListAreaBuilder _changesListAreaBuilder;
 
-        public ReleaseNotesBuilder(IChangesAreaBuilder changesAreaBuilder)
+        public ReleaseNotesBuilder(IChangesListAreaBuilder changesAreaBuilder)
         {
-            _changesAreaBuilder = changesAreaBuilder ?? throw new ArgumentNullException(nameof(changesAreaBuilder));
+            _changesListAreaBuilder = changesAreaBuilder ?? throw new ArgumentNullException(nameof(changesAreaBuilder));
         }
         public string Build(string[] changes)
-            => _changesAreaBuilder.Build(changes);
+            => _changesListAreaBuilder.Build(changes);
     }
 }

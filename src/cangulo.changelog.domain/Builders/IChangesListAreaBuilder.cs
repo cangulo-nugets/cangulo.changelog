@@ -1,6 +1,6 @@
 namespace cangulo.changelog.domain.Builders
 {
-    public interface IChangesAreaBuilder
+    public interface IChangesListAreaBuilder
     {
         string Build(string[] changes);
     }

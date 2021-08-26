@@ -6,5 +6,11 @@ namespace cangulo.changelog.abstractions.models
         {
             public const string TYPE_OTHERS = "others";
         }
+
+        public static class SectionsDelimiterConstants
+        {
+            public const string START_VERSION = "START-VERSION:";
+            public const string END_VERSION = "END-VERSION:";
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace cangulo.changelog.Extensions
         {
             return services
                 .AddTransient<IReleaseNotesBuilder, ReleaseNotesBuilder>()
+                .AddTransient<IChangelogBuilder, ChangelogBuilder>()
                 .AddDomainServices(changelogSettings);
         }
     }

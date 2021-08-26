@@ -26,16 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Builders\testData\NonConcentionalCommits_happyPath_expected.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Builders\testData\NonConcentionalCommits_happyPath_input.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Builders\testData\ConcentionalCommits_happyPath_expected.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Builders\testData\ConcentionalCommits_happyPath_input.json">
+    <None Update="Parsers\testData\ConventionalCommitParserTestData.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

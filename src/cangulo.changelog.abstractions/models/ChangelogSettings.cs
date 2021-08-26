@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace cangulo.changelog.abstractions.models
+﻿namespace cangulo.changelog.abstractions.models
 {
     public class ChangelogSettings
     {

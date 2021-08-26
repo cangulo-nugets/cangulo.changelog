@@ -1,23 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31313.79
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1E2362DF-0F33-4497-BEE2-197EFE5BA94E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3B9BA617-CE5F-4612-9C02-29B2FC421A91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.tests.integration", "..\test\cangulo.changelog.tests.integration\cangulo.changelog.tests.integration.csproj", "{F930C528-8D09-4170-9C94-9A626BCF873D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cangulo.changelog", "cangulo.changelog\cangulo.changelog.csproj", "{1C8C2088-57AA-4FDF-A89F-B2861DDA8B6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog", "cangulo.changelog\cangulo.changelog.csproj", "{1C8C2088-57AA-4FDF-A89F-B2861DDA8B6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cangulo.changelog.UT", "..\test\cangulo.changelog.UT\cangulo.changelog.UT.csproj", "{A5819EEA-06B1-4C13-975D-CA9A5FC42115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.UT", "..\test\cangulo.changelog.UT\cangulo.changelog.UT.csproj", "{A5819EEA-06B1-4C13-975D-CA9A5FC42115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cangulo.changelog.domain", "cangulo.changelog.domain\cangulo.changelog.domain.csproj", "{5359DFDA-CDF3-448C-BD4C-1BEEC8392937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.domain", "cangulo.changelog.domain\cangulo.changelog.domain.csproj", "{5359DFDA-CDF3-448C-BD4C-1BEEC8392937}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cangulo.changelog.abstractions", "cangulo.changelog.abstractions\cangulo.changelog.abstractions.csproj", "{4699C385-0F48-4A5A-93A5-E490F7E2378F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.abstractions", "cangulo.changelog.abstractions\cangulo.changelog.abstractions.csproj", "{4699C385-0F48-4A5A-93A5-E490F7E2378F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cangulo.changelog.domain.UT", "..\test\cangulo.changelog.domain.UT\cangulo.changelog.domain.UT.csproj", "{A9E3E8E0-F66A-4F21-BB08-701F46458E89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.domain.UT", "..\test\cangulo.changelog.domain.UT\cangulo.changelog.domain.UT.csproj", "{A9E3E8E0-F66A-4F21-BB08-701F46458E89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cangulo.changelog.IntegrationTests", "..\test\cangulo.changelog.IntegrationTests\cangulo.changelog.IntegrationTests.csproj", "{6AA02F6A-D27E-4186-886E-7B1431149E2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F930C528-8D09-4170-9C94-9A626BCF873D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F930C528-8D09-4170-9C94-9A626BCF873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F930C528-8D09-4170-9C94-9A626BCF873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F930C528-8D09-4170-9C94-9A626BCF873D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C8C2088-57AA-4FDF-A89F-B2861DDA8B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C8C2088-57AA-4FDF-A89F-B2861DDA8B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C8C2088-57AA-4FDF-A89F-B2861DDA8B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,17 +45,21 @@ Global
 		{A9E3E8E0-F66A-4F21-BB08-701F46458E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E3E8E0-F66A-4F21-BB08-701F46458E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9E3E8E0-F66A-4F21-BB08-701F46458E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA02F6A-D27E-4186-886E-7B1431149E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA02F6A-D27E-4186-886E-7B1431149E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA02F6A-D27E-4186-886E-7B1431149E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA02F6A-D27E-4186-886E-7B1431149E2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A9E3E8E0-F66A-4F21-BB08-701F46458E89} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
-		{4699C385-0F48-4A5A-93A5-E490F7E2378F} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
-		{5359DFDA-CDF3-448C-BD4C-1BEEC8392937} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
-		{A5819EEA-06B1-4C13-975D-CA9A5FC42115} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
+		{6AA02F6A-D27E-4186-886E-7B1431149E2B} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
 		{1C8C2088-57AA-4FDF-A89F-B2861DDA8B6E} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
-		{F930C528-8D09-4170-9C94-9A626BCF873D} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
+		{A5819EEA-06B1-4C13-975D-CA9A5FC42115} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
+		{5359DFDA-CDF3-448C-BD4C-1BEEC8392937} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
+		{4699C385-0F48-4A5A-93A5-E490F7E2378F} = {3B9BA617-CE5F-4612-9C02-29B2FC421A91}
+		{A9E3E8E0-F66A-4F21-BB08-701F46458E89} = {1E2362DF-0F33-4497-BEE2-197EFE5BA94E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5678C52E-9538-4117-A8FE-B606EB3E8F91}

@@ -7,25 +7,30 @@ namespace cangulo.changelog.domain.Parsers
 {
     public interface IConventionalCommitParser
     {
-        ConventionalCommit ParseConventionalCommit(string lastCommitMessage);
+        ConventionalCommit Parse(string commitMsg);
     }
 
     public class ConventionalCommitParser : IConventionalCommitParser
     {
         private ChangelogSettings _changelogSettings { get; set; }
-        private const string InvalidCommitMsg = "commit msg does not provide a valid convention commit type.";
 
         public ConventionalCommitParser(ChangelogSettings changelogSettings)
         {
             _changelogSettings = changelogSettings ?? throw new ArgumentNullException(nameof(changelogSettings));
         }
 
-        public ConventionalCommit ParseConventionalCommit(string lastCommitMessage)
+        public ConventionalCommit Parse(string commitMsg)
         {
-            var parts = lastCommitMessage.Split(":", StringSplitOptions.TrimEntries);
+            var parts = commitMsg.Split(":", StringSplitOptions.TrimEntries);
 
             if (parts.Length < 2)
-                throw new ArgumentException(InvalidCommitMsg);
+            {
+                return new ConventionalCommit
+                {
+                    Type = ConventionalCommitConstants.TYPE_OTHERS,
+                    Message = commitMsg
+                };
+            }
 
             var commitType = parts[0].Trim();
             if (CommitTypeIsNotValid(commitType))
