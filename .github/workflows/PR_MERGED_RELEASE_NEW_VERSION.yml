@@ -1,0 +1,30 @@
+name: PR Merged to Main
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+jobs:
+  release-new-version:
+    name: Release new version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Downloading cangulo.cicd
+        uses: cangulo/cangulo.cicd-gh-action@v0.0.1
+        with:
+          version: latest
+      - name: Calculate Next Release Number, Update Version In Files, Push Changes
+        env:
+          GitHubToken: ${{ secrets.GITHUB_TOKEN }}
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CalculateNextReleaseNumber UpdateVersionInFiles UpdateChangelog GitPushReleaseFiles --verbosity verbose
+      - name: Create the New Release
+        env:
+          GitHubToken: ${{ secrets.GITHUB_TOKEN }}
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateNewRelease --skip UpdateVersionInFiles+UpdateChangelog+GitPushReleaseFiles --verbosity verbose
+      - name: Pack and push nuget package
+        env:
+          GitHubToken: ${{ secrets.nuget_api_key }}
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage PushNugetPackages --verbosity verbose
