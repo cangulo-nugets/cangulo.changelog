@@ -4,7 +4,7 @@
     "solutionPath": "./src/cangulo.changelog.sln"
   },
   "versioning": {
-    "currentVersion": "0.0.3",
+    "currentVersion": "0.0.4",
     "updateVersionInCSProjSettings": {
       "projectPath": "./src/cangulo.changelog/cangulo.changelog.csproj",
       "preReleaseVersionSuffix": "beta"
