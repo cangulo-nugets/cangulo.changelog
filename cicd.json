@@ -1,30 +1,21 @@
 {
-  "$schema": "https://raw.githubusercontent.com/cangulo/cangulo.cicd/main/cicd.schema.json",
-  "dotnetTargets": {
-    "solutionPath": "./src/cangulo.changelog.sln",
-    "dotnetPublish": null
-  },
-  "compressDirectory": null,
-  "versioning": {
-    "currentVersion": "0.0.4",
-    "releaseAssets": null
-  },
-  "gitTargets": {
-    "email": "carlos.angulo.mascarell@outlook.com",
-    "name": "cangulo.cicd"
-  },
-  "changelogSettings": {
-    "commitsMode": "conventionalCommits",
-    "conventionalCommitsSettings": {
-      "types": [
-        "patch",
-        "minor",
-        "major"
-      ]
-    }
-  },
-  "nugetSettings": null
-}   "minor",
+    "$schema": "https://raw.githubusercontent.com/cangulo/cangulo.cicd/main/cicd.schema.json",
+    "dotnetTargets": {
+        "solutionPath": "./src/cangulo.changelog.sln"
+    },
+    "versioning": {
+        "currentVersion": "0.0.4"
+    },
+    "gitTargets": {
+        "email": "carlos.angulo.mascarell@outlook.com",
+        "name": "cangulo.cicd"
+    },
+    "changelogSettings": {
+        "commitsMode": "conventionalCommits",
+        "conventionalCommitsSettings": {
+            "types": [
+                "patch",
+                "minor",
                 "major"
             ]
         }
