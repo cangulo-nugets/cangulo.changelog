@@ -24,7 +24,7 @@ jobs:
         env:
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
         run: ./cangulo.cicd/cangulo.cicd --root . --target CreateNewRelease --skip UpdateVersionInFiles+UpdateChangelog+GitPushReleaseFiles --verbosity verbose
-      - name: Pack and push nuget package
-        env:
-          GitHubToken: ${{ secrets.nuget_api_key }}
-        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage PushNugetPackages --verbosity verbose
+      # - name: Pack and push nuget package
+      #   env:
+      #     GitHubToken: ${{ secrets.nuget_api_key }}
+      #   run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage PushNugetPackages --verbosity verbose
