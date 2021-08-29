@@ -4,7 +4,11 @@
     "solutionPath": "./src/cangulo.changelog.sln"
   },
   "versioning": {
-    "currentVersion": "0.0.3"
+    "currentVersion": "0.0.3",
+    "updateVersionInCSProjSettings": {
+      "projectPath": "./src/cangulo.changelog/cangulo.changelog.csproj",
+      "preReleaseVersionSuffix": "beta"
+    }
   },
   "gitTargets": {
     "email": "carlos.angulo.mascarell@outlook.com",
