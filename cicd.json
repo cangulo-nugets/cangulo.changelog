@@ -1,34 +1,40 @@
 {
-    "$schema": "https://raw.githubusercontent.com/cangulo/cangulo.cicd/main/cicd.schema.json",
-    "dotnetTargets": {
-        "solutionPath": "./src/cangulo.changelog.sln"
+  "$schema": "https://raw.githubusercontent.com/cangulo/cangulo.cicd/main/cicd.schema.json",
+  "dotnetTargets": {
+    "solutionPath": "./src/cangulo.changelog.sln",
+    "dotnetPublish": null
+  },
+  "compressDirectory": null,
+  "versioning": {
+    "currentVersion": "0.0.4",
+    "releaseAssets": null
+  },
+  "gitTargets": {
+    "email": "carlos.angulo.mascarell@outlook.com",
+    "name": "cangulo.cicd"
+  },
+  "changelogSettings": {
+    "commitsMode": "conventionalCommits",
+    "conventionalCommitsSettings": {
+      "types": [
+        "patch",
+        "minor",
+        "major"
+      ]
+    }
+  },
+  "nugetSettings": {
+    "packNugetSettings": {
+      "projectPath": "./src/cangulo.changelog/cangulo.changelog.csproj",
+      "outputDirectory": "./nugets"
     },
-    "versioning": {
-        "currentVersion": "0.0.3"
-    },
-    "gitTargets": {
-        "email": "carlos.angulo.mascarell@outlook.com",
-        "name": "cangulo.cicd"
-    },
-    "changelogSettings": {
-        "commitsMode": "conventionalCommits",
-        "conventionalCommitsSettings": {
-            "types": [
-                "patch",
-                "minor",
-                "major"
-            ]
-        }
-    },
-    "nugetSettings": {
-        "packNugetSettings": {
-            "projectPath": "./src/cangulo.changelog/cangulo.changelog.csproj",
-            "outputDirectory": "./nugets"
-        },
-        "pushNugetsSettings": {
-            "nugetsDirectory": "./nugets",
-            "apiKeyRequired": true,
-            "source": "https://api.nuget.org/v3/index.json"
+    "pushNugetsSettings": {
+      "nugetsDirectory": "./nugets",
+      "source": "https://api.nuget.org/v3/index.json",
+      "apiKeyRequired": true
+    }
+  }
+}://api.nuget.org/v3/index.json"
         }
     }
 }
