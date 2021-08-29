@@ -4,7 +4,7 @@
     "solutionPath": "./src/cangulo.changelog.sln"
   },
   "versioning": {
-    "currentVersion": "0.0.3",
+    "currentVersion": "0.0.4",
     "updateVersionInCSProjSettings": {
       "projectPath": "./src/cangulo.changelog/cangulo.changelog.csproj",
       "preReleaseVersionSuffix": "beta"
@@ -31,8 +31,8 @@
     },
     "pushNugetsSettings": {
       "nugetsDirectory": "./nugets",
-      "apiKeyRequired": true,
-      "source": "https://api.nuget.org/v3/index.json"
+      "source": "https://api.nuget.org/v3/index.json",
+      "apiKeyRequired": true
     }
   }
 }
