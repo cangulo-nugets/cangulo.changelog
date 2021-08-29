@@ -19,5 +19,16 @@
         "major"
       ]
     }
+  },
+  "nugetSettings": {
+    "packNugetSettings": {
+      "projectPath": "./src/cangulo.changelog/cangulo.changelog.csproj",
+      "outputDirectory": "./nugets"
+    },
+    "pushNugetsSettings": {
+      "nugetsDirectory": "./nugets",
+      "apiKeyRequired": true,
+      "source": "https://api.nuget.org/v3/index.json"
+    }
   }
 }
