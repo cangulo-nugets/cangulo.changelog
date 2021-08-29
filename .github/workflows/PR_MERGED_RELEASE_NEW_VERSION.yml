@@ -19,12 +19,12 @@ jobs:
       - name: Calculate Next Release Number, Update Version In Files, Push Changes
         env:
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        run: ./cangulo.cicd/cangulo.cicd --root . --target CalculateNextReleaseNumber UpdateVersionInFiles UpdateChangelog GitPushReleaseFiles --verbosity verbose
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CalculateNextReleaseNumber UpdateVersionInFiles UpdateChangelog GitPushReleaseFiles
       - name: Create the New Release
         env:
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateNewRelease --skip UpdateVersionInFiles+UpdateChangelog+GitPushReleaseFiles --verbosity verbose
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateNewRelease --skip UpdateVersionInFiles+UpdateChangelog+GitPushReleaseFiles
       # - name: Pack and push nuget package
       #   env:
       #     GitHubToken: ${{ secrets.nuget_api_key }}
-      #   run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage PushNugetPackages --verbosity verbose
+      #   run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage PushNugetPackages
