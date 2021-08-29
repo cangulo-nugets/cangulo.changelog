@@ -17,4 +17,4 @@ jobs:
         with:
           version: latest
       - name: Execute UT
-        run: ./cangulo.cicd/cangulo.cicd --root . --target ExecuteUnitTests --verbosity verbose
+        run: ./cangulo.cicd/cangulo.cicd --root . --target ExecuteUnitTests
