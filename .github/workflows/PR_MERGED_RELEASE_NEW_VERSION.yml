@@ -16,15 +16,19 @@ jobs:
         uses: cangulo/cangulo.cicd-gh-action@v0.0.1
         with:
           version: latest
-      - name: Calculate Next Release Number, Update Version In Files, Push Changes
+      - name: Calculate Next Release Number
         env:
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        run: ./cangulo.cicd/cangulo.cicd --root . --target CalculateNextReleaseNumber UpdateVersionInFiles UpdateChangelog GitPushReleaseFiles
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CalculateNextReleaseNumber UpdateVersionInCICDFile UpdateChangelog UpdatePreReleaseVersionInCSProj GitPushReleaseFiles
+      # - name: Update Version In CICD File, Changelog and csproj file
+      #   run: ./cangulo.cicd/cangulo.cicd --root . --target UpdateVersionInCICDFile UpdateChangelog UpdatePreReleaseVersionInCSProj GitPushReleaseFiles
+      # - name: Pushing changes
+      #   run: ./cangulo.cicd/cangulo.cicd --root . --target GitPushReleaseFiles
       - name: Create the New Release
         env:
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateNewRelease --skip UpdateVersionInFiles+UpdateChangelog+GitPushReleaseFiles
-      # - name: Pack and push nuget package
-      #   env:
-      #     GitHubToken: ${{ secrets.nuget_api_key }}
-      #   run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage PushNugetPackages
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateNewRelease --skip ListCommitsInThisPR
+      - name: Pack and push nuget package
+        env:
+          GitHubToken: ${{ secrets.nuget_api_key }}
+        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage PushNugetPackages
