@@ -4,7 +4,7 @@
     "solutionPath": "./src/cangulo.changelog.sln"
   },
   "versioning": {
-    "currentVersion": "0.0.4"
+    "currentVersion": "0.0.5"
   },
   "gitTargets": {
     "email": "carlos.angulo.mascarell@outlook.com",
