@@ -1,23 +1,26 @@
-name: Push Nuget
+# name: Push Nuget
 
-on:
-  push:
-    branches:
-      - "main"
+# on:
+#   workflow_dispatch:
 
-jobs:
-  push-nuget:
-    runs-on: ubuntu-latest
-    name: Push Nuget
-    steps:
-      - uses: actions/checkout@v2
-      - name: Downloading cangulo.cicd
-        uses: cangulo/cangulo.cicd-gh-action@v0.0.1
-        with:
-          version: latest
-      - name: Pack Nuget Package
-        run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage
-      - name: Push Nuget Package
-        env:
-          NugetApiKey: ${{ secrets.NUGET_API_KEY }}
-        run: ./cangulo.cicd/cangulo.cicd --root . --target PushNugetPackages
+# 1. Provide the version as input
+# 2. Put the version in the cicd.json file
+#
+#
+
+# jobs:
+#   push-nuget:
+#     runs-on: ubuntu-latest
+#     name: Push Nuget
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Downloading cangulo.cicd
+#         uses: cangulo/cangulo.cicd-gh-action@v0.0.1
+#         with:
+#           version: latest
+#       - name: Pack Nuget Package
+#         run: ./cangulo.cicd/cangulo.cicd --root . --target CreateReleaseNugetPackage
+#       - name: Push Nuget Package
+#         env:
+#           NugetApiKey: ${{ secrets.NUGET_API_KEY }}
+#         run: ./cangulo.cicd/cangulo.cicd --root . --target PushNugetPackages
