@@ -20,10 +20,6 @@ jobs:
         env:
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
         run: ./cangulo.cicd/cangulo.cicd --root . --target CalculateNextReleaseNumber UpdateVersionInCICDFile UpdateChangelog UpdatePreReleaseVersionInCSProj GitPushReleaseFiles
-      # - name: Update Version In CICD File, Changelog and csproj file
-      #   run: ./cangulo.cicd/cangulo.cicd --root . --target UpdateVersionInCICDFile UpdateChangelog UpdatePreReleaseVersionInCSProj GitPushReleaseFiles
-      # - name: Pushing changes
-      #   run: ./cangulo.cicd/cangulo.cicd --root . --target GitPushReleaseFiles
       - name: Create the New Release
         env:
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}

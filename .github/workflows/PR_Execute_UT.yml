@@ -1,4 +1,4 @@
-name: Execute UT
+name: PR Execute UT
 
 on:
   pull_request:
@@ -8,8 +8,8 @@ on:
 
 jobs:
   execute-UT:
-    runs-on: ubuntu-latest
     name: Execute UT
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Downloading cangulo.cicd
