@@ -16,8 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Creating Release
-        uses: cangulo-actions/cangulo.nuke.releasecreator@v0.0.1
+        with:
+          token: ${{ secrets.ACCESS_PUBLIC_REPOS }}
+      - name: Creaing Release
+        uses: cangulo-actions/cangulo.nuke.releasecreator@main
         with:
           releaseSettingsPath: ./cicd/releaseSettings.json
           token: ${{ secrets.GITHUB_TOKEN }}

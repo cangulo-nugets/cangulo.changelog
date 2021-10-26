@@ -21,7 +21,6 @@ namespace cangulo.changelog.Parsers
 
         public ConventionalCommit Parse(string commitMsg)
         {
-            
             var parts = commitMsg.Split(":", StringSplitOptions.TrimEntries);
 
             if (parts.Length < 2)
