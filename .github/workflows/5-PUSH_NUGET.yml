@@ -1,0 +1,29 @@
+name: Push Nuget Package
+
+on:
+  workflow_dispatch:
+  release:
+    types: [released]
+  workflow_run:
+    workflows: ["Release New Version v1"]
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  create-nuget-package:
+    name: Push Nuget Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create Nuget Package
+        run: |
+          dotnet pack ./src/cangulo.changelog/cangulo.changelog.csproj \
+            --include-symbols \
+            --output ./nugets \
+            /property:SymbolPackageFormat=snupkg
+      - name: Push Nuget Package
+        run: |
+          dotnet nuget push ./nugets/*.nupkg \
+            --source https://api.nuget.org/v3/index.json \
+            --api-key ${{ secrets.NUGET_API_KEY }}
