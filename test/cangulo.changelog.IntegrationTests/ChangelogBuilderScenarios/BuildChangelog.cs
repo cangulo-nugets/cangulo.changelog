@@ -59,7 +59,7 @@ namespace cangulo.changelog.IntegrationTests.ChangelogBuilderScenarios.NonConven
                 {
                     var lineContainsPlaceholder = PlaceholderConstants.PLACEHOLDER_LIST.Any(y => y == x.expectedLine);
                     if (!lineContainsPlaceholder)
-                        x.resultLine.Should().BeEquivalentTo(x.expectedLine);
+                        x.resultLine.Trim().Should().BeEquivalentTo(x.expectedLine.Trim());
                 });
         }
 
@@ -67,7 +67,7 @@ namespace cangulo.changelog.IntegrationTests.ChangelogBuilderScenarios.NonConven
         {
             using StreamReader reader = new(TemporalOutputChangelogPath);
             var content = await reader.ReadToEndAsync();
-            return content.Split("\r\n");
+            return content.Split("\n");
         }
 
         private async Task PreparePreviousChangelogFileAsync(Input input)
@@ -76,7 +76,7 @@ namespace cangulo.changelog.IntegrationTests.ChangelogBuilderScenarios.NonConven
 
             if (input.PreviousChangelogFile.Any())
             {
-                var currentChangelogContent = string.Join("\r\n", input.PreviousChangelogFile.ToArray());
+                var currentChangelogContent = string.Join('\n', input.PreviousChangelogFile.ToArray());
                 using StreamWriter writer = new(TemporalOutputChangelogPath);
                 await writer.WriteAsync(currentChangelogContent);
             }

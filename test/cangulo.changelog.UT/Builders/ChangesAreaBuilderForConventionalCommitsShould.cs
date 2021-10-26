@@ -42,7 +42,7 @@ namespace cangulo.changelog.UT.Builders
             // Arrange
             var testData = await TestDataHelper.GetTestDataForScenario<ChangesAreaBuilderTestData>(scenario, TestDataPath);
             var input = testData.Input;
-            var expectedOutput = string.Join("\r\n", testData.ExpectedOutput.ToArray());
+            var expectedOutput = string.Join('\n', testData.ExpectedOutput.ToArray());
 
             // Act
             var result = sut.Build(input);
