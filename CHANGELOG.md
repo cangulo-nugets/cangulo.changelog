@@ -1,3 +1,10 @@
+<!-- START-VERSION: 0.0.7 -->
+# 0.0.7
+2021-10-26
+
+fix:
+* testing release triggering
+<!-- END-VERSION: 0.0.7 -->
 <!-- START-VERSION: 0.0.6 -->
 # 0.0.6
 2021-10-26

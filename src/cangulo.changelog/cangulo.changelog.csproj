@@ -6,7 +6,7 @@
 
   <PropertyGroup>
     <PackageId>cangulo.changelog</PackageId>
-    <Version>0.0.6-beta</Version>
+    <Version>0.0.7-beta</Version>
     <Authors>Carlos Angulo</Authors>
     <Company></Company>
     <PackageTags>changelog;release;releases;dotnet;</PackageTags>
