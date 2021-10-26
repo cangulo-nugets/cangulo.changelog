@@ -33,6 +33,7 @@ namespace cangulo.changelog.Parsers
             }
 
             var commitType = parts[0].Trim();
+            
             if (CommitTypeIsNotValid(commitType))
                 commitType = ConventionalCommitConstants.TYPE_OTHERS;
 
