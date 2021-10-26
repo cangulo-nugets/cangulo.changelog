@@ -12,9 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Downloading cangulo.cicd
-        uses: cangulo/cangulo.cicd-gh-action@v0.0.1
-        with:
-          version: latest
       - name: Execute UT
-        run: ./cangulo.cicd/cangulo.cicd --root . --target ExecuteUnitTests
+        run: dotnet build ./src
