@@ -1,3 +1,10 @@
+<!-- START-VERSION: 0.0.8 -->
+# 0.0.8
+2021-11-01
+
+fix:
+* updated gh actiosn and deleted unused c#
+<!-- END-VERSION: 0.0.8 -->
 <!-- START-VERSION: 0.0.7 -->
 # 0.0.7
 2021-10-26
