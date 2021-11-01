@@ -1,4 +1,4 @@
-name: Validating Conventional Commits
+name: Validating Commits
 
 on:
   workflow_dispatch:
@@ -7,12 +7,8 @@ on:
 
 
 jobs:
-  validate-conventional-commits:
-    name: Validating Conventional Commits
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Validating PR commits
-        uses: cangulo-actions/cangulo.nuke.prcommitsvalidations@v0.0.1
-        with:
-          validationSettingsPath: ./cicd/prCommitValidationSettings.json
+  call-validate-commits-workflow:
+    name: Validating Commits
+    uses: cangulo-actions/workflows/.github/workflows/validate-commits.yml@v0.0.1
+    with:
+      validationSettingsPath: ./cicd/prCommitValidationSettings.json
