@@ -6,14 +6,10 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  validate-conventional-commits:
+  call-calculate-next-release-number-workflow:
     name: Calculate Next Release Number
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Calculating Next Release Version
-        uses: cangulo-actions/cangulo.nuke.releasecreator@v0.0.1
-        with:
-          releaseSettingsPath: ./cicd/releaseSettings.json
-          token: ${{ secrets.GITHUB_TOKEN }}
-          onlyCalculateReleaseNumber: true
+    uses: cangulo-actions/workflows/.github/workflows/calculate-next-release-number.yml@v0.0.1
+    with:
+      releaseSettingsPath: ./cicd/releaseSettings.json
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
